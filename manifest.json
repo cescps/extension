@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+  "name": "Changer Extension",
+  "version": "1.0",
+  "description": "A Google Chrome extension to change website fonts, colors, and delete elements.",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}
