@@ -1,20 +1,15 @@
 {
-  "manifest_version": 2,
-  "name": "Changer Extension",
+  "name": "Font and Color Changer",
   "version": "1.0",
-  "description": "A Google Chrome extension to change website fonts, colors, and delete elements.",
+  "description": "This extension allows you to change the font and color of a website.",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["contentscript.js"]
+    }
+  ],
   "browser_action": {
     "default_popup": "popup.html"
   },
-  
-  "permissions": [
-    "activeTab"
-  ],
-  
-  "content_scripts": [
-  {
-    "matches": ["<all_urls>"],
-    "js": ["contentScript.js"]
-  }
-]
+  "permissions": ["tabs"]
 }
